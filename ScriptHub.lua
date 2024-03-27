@@ -1,6 +1,6 @@
 local TweenService = game:GetService("TweenService")
 local TInfo = TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut)
-local Info = TweenInfo.new(60, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local Info = TweenInfo.new(30, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 
 
 local function AnimateOpen(Frame: Frame)
@@ -27,6 +27,7 @@ local function TweetPlayer(HumanoidRootPart: Part, Goal: Part)
 end
 
 local player = game:GetService("Players").LocalPlayer
+
 local character = player.Character or player.CharacterAdded:Wait()
 local HumanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 
@@ -76,6 +77,10 @@ BronzChest.Size = UDim2.fromScale(0.709, 0.229)
 BronzChest.Text = "BronzChest"
 
 button.Activated:Connect(function()
+	
+	local character = player.Character or player.CharacterAdded:Wait()
+	local HumanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+	
 	if Frame.Visible == true then
 		AnimateClose(Frame)
 		Frame.Visible = false
@@ -86,6 +91,10 @@ button.Activated:Connect(function()
 end)
 
 BronzChest.Activated:Connect(function()
+	
+	local character = player.Character or player.CharacterAdded:Wait()
+	local HumanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+	
 	if game.Workspace.Chest1 then
 		BronzChest.Text = "BronzChest Found"
 		TweetPlayer(HumanoidRootPart, game.Workspace.Chest1)
@@ -98,6 +107,10 @@ BronzChest.Activated:Connect(function()
 end)
 
 GoldChest.Activated:Connect(function()
+	
+	local character = player.Character or player.CharacterAdded:Wait()
+	local HumanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+	
 	if game.Workspace.Chest2 then
 		GoldChest.Text = "GoldChest Found"
 		TweetPlayer(HumanoidRootPart, game.Workspace.Chest2)
@@ -110,6 +123,10 @@ GoldChest.Activated:Connect(function()
 end)
 
 DiaChest.Activated:Connect(function()
+	
+	local character = player.Character or player.CharacterAdded:Wait()
+	local HumanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+	
 	if game.Workspace.Chest3 then
 		BronzChest.Text = "DiaChest Found"
 		TweetPlayer(HumanoidRootPart, game.Workspace.Chest3)
