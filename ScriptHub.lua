@@ -1,6 +1,6 @@
 local TweenService = game:GetService("TweenService")
 local TInfo = TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut)
-local Info = TweenInfo.new(30, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local Info = TweenInfo.new(60, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 
 
 local function AnimateOpen(Frame: Frame)
